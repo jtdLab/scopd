@@ -1,0 +1,13 @@
+name: scopd
+description: Owner-aware scopes for Flutter widgets.
+version: 1.0.0
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.5+1
+
+dev_dependencies:
+  very_good_analysis: ^9.0.0
