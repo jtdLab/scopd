@@ -43,10 +43,10 @@ Scopd(
 typedef OwnerWidgetParams = ({TextEditingController controller, bool foo, String bar});
 
 Widget build(BuildContext context) {
-  final data = context.read<MyWidget, ({int foo, bool bar})>();
+  final scope = context.read<MyWidget, ({int foo, bool bar})>();
 }
 
 Widget build(BuildContext context) {
-  final data = context.read<OwnerWidget, OwnerWidgetParams>();
+  final scope = context.read<OwnerWidget, OwnerWidgetParams>();
 }
 ```
