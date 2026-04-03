@@ -50,5 +50,3 @@ Widget build(BuildContext context) {
   final data = context.read<OwnerWidget, OwnerWidgetParams>();
 }
 ```
-
-If a value was not scoped, `read` throws with a hint showing the pattern above.
