@@ -6,7 +6,7 @@ Typed, owner-aware scoping for Flutter widgets.
 
 Lookups that only use the value's type break down when you need more than one value of that type in the tree: nested scopes usually *shadow* the outer one, so you cannot read both. **scopd** fixes that by scoping with an **owner** type `O` together with the value type `V`, so you can resolve the same `V` in different places without the inner scope hiding the outer.
 
-Wrap widgets with `Scopd` or the `.scopd()` extension, then read values from `BuildContext` with `context.read<O, V>()`.
+Wrap widgets with `Scopd` or the `.scopd()` extension, then read values from `BuildContext` with `context.scopd<O, V>()`.
 
 ## Usage
 
@@ -43,10 +43,10 @@ Scopd(
 typedef Scope = ({TextEditingController controller, bool foo, String bar});
 
 Widget build(BuildContext context) {
-  final scope = context.read<MyWidget, ({int foo, bool bar})>();
+  final scope = context.scopd<MyWidget, ({int foo, bool bar})>();
 }
 
 Widget build(BuildContext context) {
-  final scope = context.read<OwnerWidget, Scope>();
+  final scope = context.scopd<OwnerWidget, Scope>();
 }
 ```

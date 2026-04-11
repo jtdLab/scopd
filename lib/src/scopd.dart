@@ -34,7 +34,7 @@ extension ScopdWidgetX<T extends Widget> on T {
 }
 
 extension ScopdBuildContextX on BuildContext {
-  V read<O extends Widget, V extends Object>() {
+  V scopd<O extends Widget, V extends Object>() {
     try {
       final value = ReadContext(this).read<({O owner, V value})>().value;
       return value;
